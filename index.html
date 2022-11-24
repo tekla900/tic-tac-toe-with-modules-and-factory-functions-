@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/b51b7dd055.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <section class="user-names-input">
+
+            <div class="users">
+                <div>
+                    <label for="user-1">Player 1 <span>(X)</span> </label>
+                    <input type="text" name="user-1" id="user-1" placeholder="Enter name" required>  
+                    <span class="error">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        The name field must be filled
+                    </span>  
+                </div>
+                
+                <div>
+                    <label for="user-2">Player 2 <span>(O)</span></label>
+                    <input type="text" name="user-2" id="user-2" placeholder="Enter name" required>
+                    <span class="error">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        The name field must be filled
+                    </span>      
+                </div>
+            </div>
+            <button type="button" class="start">Start The Game!</button>
+         </section>
+
+        <section class="board">
+            <div class="square" data-index="0"></div>
+            <div class="square" data-index="1"></div>
+            <div class="square" data-index="2"></div>
+            <div class="square" data-index="3"></div>
+            <div class="square" data-index="4"></div>
+            <div class="square" data-index="5"></div>
+            <div class="square" data-index="6"></div>
+            <div class="square" data-index="7"></div>
+            <div class="square" data-index="8"></div>
+        </section>
+
+        <section class="winnerSec">
+            <h3 class="winner"></h3>
+            <button class="restart">Restart</button>
+        </section>
+
+        <section class="score">
+            <div class="player">
+                <h4 id="o">X</h4>
+                <h3 id="player-1">name</h3>
+            </div>     
+            <h2 class="x-score">0</h2>
+            :
+            <h2 class="o-score">0</h2>
+            <div class="player">
+                <h4 id="o">O</h4>
+                <h3 id="player-2">name</h3>
+            </div>        
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

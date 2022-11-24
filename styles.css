@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --x: #31C3BD;
+    --o: #F2B137;
+    --background: linear-gradient(0deg, #1A2A33, #1A2A33),
+    linear-gradient(0deg, rgba(168, 191, 201, 0.25), rgba(168, 191, 201, 0.25));    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background);
+    color: #A8BFC9;
+}
+
+.square {
+    border-radius: 15px;
+    background: #1F3641;
+    box-shadow: 0px -8px 0px 0px #10212A inset;
+    height: 130px;
+    width: 130px;
+    font-size: 5em;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.board {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    width: 390px;
+    margin: 40px auto;
+    gap: 20px;
+}
+
+.winnerSec {
+    width: 390px;
+    margin: 40px auto;
+    height: 390px;
+    background-color: #1F3641;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    border-radius: 15px;
+}
+
+.score {
+    width: 70vw;
+    margin: 40px auto;
+    justify-content: space-between;
+    font-size: 3rem;
+    align-items: center;
+}
+
+.user-names-input {
+    width: 85vw;
+    margin: 0 auto;
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.users {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.users div {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+input {
+    height: 45px;
+    width: 220px;
+    padding-left: 7.5px;
+    border-radius: 3.125px;
+    outline: none;
+    border: 0.63px solid #07043B;  
+}
+
+label, input {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.44px;
+}
+
+.board, .score {
+    display: none;
+}
+
+button {
+    height: 45px;
+    width: 200px;
+    border-radius: 3.125px;
+    margin: 80px auto;
+    border: none;
+    background-color: orange;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.44px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(218, 142, 1);
+}
+
+#x {
+    color: #31C3BD;
+}
+
+#o {
+    color: #F2B137;
+}
+
+.x, .o {
+    display: flex;
+}
+
+.restart, .winner {
+    margin: 0 auto;
+
+}
+
+.error {
+    color: #D70040;
+    display: none;
+}
